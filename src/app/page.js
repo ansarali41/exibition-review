@@ -13,7 +13,7 @@ export default function Home() {
         setModalOpen(true);
         setTimeout(() => {
             setModalOpen(false);
-        }, 3000); // Hide modal after 5 seconds
+        }, 1000); // Hide modal after 5 seconds
     };
     return (
         <>
