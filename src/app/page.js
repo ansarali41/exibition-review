@@ -36,8 +36,8 @@ export default function Home() {
                         </div>
                         <div className="col-span-10 h-full m-0 p-0">
                             <div className="flex items-center justify-center">
-                                <div className="w-full h-full">
-                                    <ImageSlider />
+                                <div className="w-full h-full rounded-lg">
+                                    <Image className="rounded-md" src="https://i.ibb.co.com/WpnSXB6/image2.jpg" alt="img 1" width={600} height={100} />
                                 </div>
                             </div>
                             <div className="flex items-center justify-end py-4">
