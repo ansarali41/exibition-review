@@ -14,10 +14,6 @@ const FeedbackResponses = () => {
                 setIsLoading(true);
                 const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/save-feedback-db`);
 
-                if (res.statusText !== 'OK' || res.status !== 200) {
-                    throw new Error(`HTTP error! status: ${res.status}`);
-                }
-
                 if (res?.data?.data) {
                     setFeedbacks(res.data?.data);
                 }
@@ -29,7 +25,7 @@ const FeedbackResponses = () => {
         };
         response();
     }, []);
-
+    console.log('feedbacks', feedbacks);
     const exportToExcel = () => {
         const workbook = XLSX.utils.book_new();
         const worksheet = XLSX.utils.json_to_sheet(
