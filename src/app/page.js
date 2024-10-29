@@ -58,7 +58,7 @@ export default function Home() {
 
             <div className="flex justify-center items-center">
                 <Link href="/feedbacks">
-                    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">View Feedback</button>
+                    <small className=" text-[#3bb74a] font-bold py-2 px-4 rounded">View Feedback</small>
                 </Link>
             </div>
             {/* Button to Show Modal */}
