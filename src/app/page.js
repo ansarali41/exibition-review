@@ -3,6 +3,7 @@ import UserForm from '@/components/Form';
 import Image from 'next/image';
 import ImageSlider from '@/components/ImageSlider';
 import { useState } from 'react';
+import brandLogo from '../../public/asset/logo1.png';
 
 export default function Home() {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Home() {
         setModalOpen(true);
         setTimeout(() => {
             setModalOpen(false);
-        }, 5000); // Hide modal after 5 seconds
+        }, 3000); // Hide modal after 5 seconds
     };
     return (
         <>
@@ -39,7 +40,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="flex items-center justify-end py-4">
-                                <Image src="/asset/logo1.png" height={100} width={200} alt="logo" />
+                                <Image src={brandLogo} height={100} width={200} alt="logo" />
                             </div>
                         </div>
                     </div>
@@ -69,7 +70,7 @@ export default function Home() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-10">
                     <div className="bg-[#1995ad] rounded-lg shadow-lg w-[600px]  text-center p-8">
                         <h2 className="text-5xl font-bold text-white">Thanks</h2>
-                        <p className="mt-4 font-semibold text-3xl text-[#a1d6e2]">Your opinion is highly valued</p>
+                        <p className="mt-4 font-semibold text-3xl text-[#a1d6e2]">For Your Valuable Feedback</p>
                     </div>
                 </div>
             )}

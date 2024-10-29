@@ -20,7 +20,7 @@ const UserForm = ({ showModal }) => {
         e.preventDefault();
 
         // Send form data to the server
-        const res = await fetch('/api/save-feedback-db', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/save-feedback-db`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +28,6 @@ const UserForm = ({ showModal }) => {
             body: JSON.stringify(formData),
         });
 
-        console.log('res form:31', res);
         if (res?.ok) {
             showModal();
             setFormData({
