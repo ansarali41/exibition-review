@@ -29,7 +29,7 @@ export async function POST(req) {
 
         return NextResponse.json({ message: 'Success', data: feedback }, { status: 201 });
     } catch (error) {
-        console.error('API Error:', error);
+        console.error('Post feedback API Error:', error);
         return NextResponse.json(
             {
                 error: error.message,
@@ -50,7 +50,7 @@ export async function GET(req) {
 
         return NextResponse.json({ data: feedbacks }, { status: 200 });
     } catch (error) {
-        console.error('API Error:', error);
+        console.error('Get feedback API Error:', error);
         return NextResponse.json(
             {
                 error: error.message,

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ImageSlider from '@/components/ImageSlider';
 import { useState } from 'react';
 import brandLogo from '../../public/asset/logo1.png';
+import Link from 'next/link';
 
 export default function Home() {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -55,6 +56,11 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className="flex justify-center items-center">
+                <Link href="/feedbacks">
+                    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">View Feedback</button>
+                </Link>
+            </div>
             {/* Button to Show Modal */}
             {/* <div className="fixed bottom-5 right-5">
           <button
